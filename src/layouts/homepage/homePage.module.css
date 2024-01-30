@@ -1,0 +1,73 @@
+.headerWrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 600;
+  padding-block: 24px;
+}
+
+.salutaion {
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    black 1px,
+    transparent 0
+  );
+  background-size: 80px 80px;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.salutaionMinor {
+  font-size: 4vh;
+  margin-bottom: -143px;
+}
+
+.salutaionMajor {
+  font-size: 20vh;
+  margin-bottom: 160px;
+}
+
+.wavingHand {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+  font-size: 8vh;
+  margin-left: 146px;
+  margin-bottom: 0px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
