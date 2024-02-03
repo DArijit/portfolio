@@ -2,13 +2,8 @@ import React from "react";
 import styles from "./salutation.module.css";
 
 const Salutation = () => {
- 
   return (
-    <div
-      id="test"
-      className={styles.salutation}
-      onWheel={(e) => console.log(e)}
-    >
+    <div className={styles.salutation}>
       <section>
         Hey
         <section className={styles.wavingHand}>👋</section>

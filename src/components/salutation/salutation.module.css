@@ -1,54 +1,62 @@
 .salutation {
-    font-size: 10vw;
-    display: flex;
-    justify-content: flex-end;
-    height: 60vh;
-    align-items: center;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    font-weight: 700;
-    padding-bottom: 10vh;
-    box-shadow:  0 8px 20px -6px rgb(177, 177, 177);
-    width: auto;
+  font-size: 10vw;
+  display: flex;
+  justify-content: flex-end;
+  height: 60vh;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  font-weight: 700;
+  padding-bottom: 10vh;
+  box-shadow: 0 8px 20px -6px rgb(177, 177, 177);
+  width: auto;
+  animation: fadeOut linear;
+  animation-timeline: view();
+  animation-range: exit -10vh;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
   }
-  
-  .italics {
-    font-size: 5vw;
+}
+
+.italics {
+  font-size: 5vw;
+}
+
+.wavingHand {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .wavingHand {
-    animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-    animation-duration: 2.5s; /* Change to speed up or slow down */
-    animation-iteration-count: infinite; /* Never stop waving :) */
-    transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-    display: inline-block;
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
   }
-  
-  @keyframes wave-animation {
-    0% {
-      transform: rotate(0deg);
-    }
-    10% {
-      transform: rotate(14deg);
-    } /* The following five values can be played with to make the waving more or less extreme */
-    20% {
-      transform: rotate(-8deg);
-    }
-    30% {
-      transform: rotate(14deg);
-    }
-    40% {
-      transform: rotate(-4deg);
-    }
-    50% {
-      transform: rotate(10deg);
-    }
-    60% {
-      transform: rotate(0deg);
-    } /* Reset for the last half to pause */
-    100% {
-      transform: rotate(0deg);
-    }
+  30% {
+    transform: rotate(14deg);
   }
-  
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
