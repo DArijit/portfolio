@@ -1,0 +1,17 @@
+.headerWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 600;
+    padding-block: 24px;
+  }
+  
+  @media screen and (max-width: 764px){
+    .headLeft{
+      display: none;
+    }
+    .headRight {
+      display: none;
+    }
+  }
