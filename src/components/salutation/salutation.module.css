@@ -11,13 +11,21 @@
   padding-bottom: 10vh;
   box-shadow: 0 8px 20px -6px rgb(177, 177, 177);
   width: auto;
-  animation: fadeOut linear;
-  animation-timeline: view();
+  animation: fadeOut linear forwards;
+  animation-timeline: view(10vh 50vh);
   animation-range: exit -10vh;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
 }
 
 @keyframes fadeOut {
+  from {
+    filter:blur(0vw);
+    opacity: 1;
+  }
   to {
+    filter: blur(2vw);
     opacity: 0;
   }
 }

@@ -1,0 +1,42 @@
+.containerWrapper {
+    margin-top: 75vh;
+    font-size: 20vw;
+    color: silver;
+  }
+  
+  .front {
+    display: grid;
+    justify-content: space-around;
+    animation: color ease-in-out forwards;
+    animation-timeline: view(40vh);
+  }
+  
+  .react {
+    animation: color ease-in-out forwards;
+    animation-timeline: view(40vh);
+  }
+  
+  .end {
+    animation: color ease-in-out forwards;
+    animation-timeline: view(40vh);
+  }
+  
+  .dev {
+    display: grid;
+    justify-content: end;
+    animation: colorRed ease-in-out forwards;
+    animation-timeline: view(40vh);
+  }
+  
+  @keyframes color {
+    to {
+      color: black;
+    }
+  }
+  
+  @keyframes colorRed {
+      to {
+        color: red;
+      }
+    }
+  

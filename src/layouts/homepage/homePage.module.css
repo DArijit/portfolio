@@ -1,1 +1,9 @@
+.parallaxRemoveScrollbar {
+  -webkit-scrollbar-display: none !important;
+  scrollbar-width: 0 !important;
+  overflow: hidden !important;
+}
 
+.parallaxRemoveScrollbar::-webkit-scrollbar {
+  display: none;
+}
