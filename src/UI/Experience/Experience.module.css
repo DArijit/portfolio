@@ -1,0 +1,48 @@
+.experienceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30vh;
+}
+.experienceName {
+  font-size: 10vh;
+}
+
+.removeMargin {
+  margin: 0;
+}
+.expName {
+  font-size: 2rem;
+}
+.expClient {
+  font-size: 1.5rem;
+}
+.expDesignation {
+  font-style: italic;
+  color: gray;
+}
+.expDuration {
+  font-size: 0.9rem;
+  color: gray;
+}
+.expContainer {
+  margin-top: 10px;
+  background: #f1f1f1;
+  display: flex;
+  padding: 20px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #e9e9e9;
+}
+
+.expContainer:hover{
+  background: rgb(253, 253, 253)
+}
+
+.leftExp {
+  width: 20vw;
+}
+
+.righttExp {
+  width: auto;
+}
