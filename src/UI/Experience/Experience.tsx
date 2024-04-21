@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import styles from "./Experience.module.css";
+import { ContentWrapper } from "../Shared/Shared";
 
 const Experience = () => {
   const months = [
@@ -57,22 +58,23 @@ const Experience = () => {
 
   return (
     <div className={styles.experienceContainer}>
-      <h3 className={classNames([styles.experienceName, styles.removeMargin])}>Experience</h3>
-      <div>
-        {experience.map((exp) => (
-          <div className={styles.expContainer} key={exp.name}>
-            <div className={styles.leftExp}>
-              <div className={styles.expName}>{exp.name}</div>
-              <div className={styles.expClient}>{exp.client}</div>
-              <div className={styles.expDesignation}>{exp.designation}</div>
-              <div
-                className={styles.expDuration}
-              >{`${exp.dayStarted}${exp.dayEnded !== undefined ? ` - ${exp.dayEnded}` : " - present"}`}</div>
+      <ContentWrapper header="Experience">
+        <>
+          {experience.map((exp) => (
+            <div className={styles.expContainer} key={exp.name}>
+              <div className={styles.leftExp}>
+                <div className={styles.expName}>{exp.name}</div>
+                <div className={styles.expClient}>{exp.client}</div>
+                <div className={styles.expDesignation}>{exp.designation}</div>
+                <div
+                  className={styles.expDuration}
+                >{`${exp.dayStarted}${exp.dayEnded !== undefined ? ` - ${exp.dayEnded}` : " - present"}`}</div>
+              </div>
+              <div className={styles.rightExp}>{exp.description}</div>
             </div>
-            <div  className={styles.rightExp}>{exp.description}</div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </>
+      </ContentWrapper>
     </div>
   );
 };
