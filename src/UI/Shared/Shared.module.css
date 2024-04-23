@@ -4,12 +4,12 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--white200);
   padding: 40px;
   margin: auto auto;
   min-width: 500px;
   max-width: 60vw;
-  box-shadow: 0 0 5px #e9e9e9;
+  box-shadow: 0 0 5px var(--white100);
 }
 
 @keyframes scrollObserver {
@@ -31,7 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation-timeline: view(block 80% 20%);
+  animation-timeline: view(block 95% 5%);
   animation-timing-function: linear;
   animation-name: scrollObserver;
   animation-duration: 1ms; /* Firefox requires this to apply the animation */
@@ -41,9 +41,9 @@
 .tint{
   width: 100px;
   height: 100px;
-  background-color: #ff0606;
+  background-color: var(--red);
   position: absolute;
   border-radius: 900px;
-  box-shadow: 0 0 100px red;
+  box-shadow: 0 0 100px var(--red);
   filter: blur(65px);
 }

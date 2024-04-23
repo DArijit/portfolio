@@ -1,0 +1,16 @@
+.InteractionContainer{
+    background-color: var(--white200);
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 2rem;
+    padding-right: 3rem;
+    margin-bottom: 5rem;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+
+}
